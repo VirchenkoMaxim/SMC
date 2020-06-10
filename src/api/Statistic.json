@@ -1,0 +1,92 @@
+[
+    {
+        "user_id": 1,
+        "date": "2019-10-02",
+        "page_views": 260,
+        "clicks": 565
+    },
+    {
+        "user_id": 2,
+        "date": "2019-10-02",
+        "page_views": 766,
+        "clicks": 258
+    },
+    {
+        "user_id": 3,
+        "date": "2019-10-02",
+        "page_views": 528,
+        "clicks": 776
+    },
+    {
+        "user_id": 4,
+        "date": "2019-10-02",
+        "page_views": 323,
+        "clicks": 373
+    },
+    {
+        "user_id": 5,
+        "date": "2019-10-02",
+        "page_views": 721,
+        "clicks": 723
+    },
+    {
+        "user_id": 6,
+        "date": "2019-10-02",
+        "page_views": 304,
+        "clicks": 726
+    },
+    {
+        "user_id": 7,
+        "date": "2019-10-02",
+        "page_views": 724,
+        "clicks": 505
+    },
+    {
+        "user_id": 8,
+        "date": "2019-10-02",
+        "page_views": 956,
+        "clicks": 133
+    },
+    {
+        "user_id": 9,
+        "date": "2019-10-02",
+        "page_views": 496,
+        "clicks": 327
+    },
+    {
+        "user_id": 10,
+        "date": "2019-10-02",
+        "page_views": 702,
+        "clicks": 917
+    },
+    {
+        "user_id": 11,
+        "date": "2019-10-02",
+        "page_views": 635,
+        "clicks": 234
+    },
+    {
+        "user_id": 12,
+        "date": "2019-10-02",
+        "page_views": 503,
+        "clicks": 930
+    },
+    {
+        "user_id": 13,
+        "date": "2019-10-02",
+        "page_views": 946,
+        "clicks": 552
+    },
+    {
+        "user_id": 14,
+        "date": "2019-10-02",
+        "page_views": 369,
+        "clicks": 344
+    },
+    {
+        "user_id": 15,
+        "date": "2019-10-02",
+        "page_views": 981,
+        "clicks": 196
+    }
+]

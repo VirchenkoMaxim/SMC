@@ -1,0 +1,11 @@
+.header {
+    background-color: #3a80ba;
+    height: 70px;
+    display: grid;
+    align-items: center;
+    &__title {
+        font-size: 40px;
+        line-height: 49px;
+        color: #ffffff;
+    }
+}

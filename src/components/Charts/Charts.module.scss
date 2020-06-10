@@ -1,0 +1,26 @@
+.charts {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    &__crumb {
+        margin-top: 16px;
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 39px;
+        color: #1a1a1a;
+        margin-top: 24px;
+        font-weight: bold;
+    }
+    &__subtitle {
+        font-size: 24px;
+        line-height: 29px;
+        color: #1a1a1a;
+        margin: 28px 0 18px 0;
+        font-weight: bold;
+    }
+    &__footer {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+}

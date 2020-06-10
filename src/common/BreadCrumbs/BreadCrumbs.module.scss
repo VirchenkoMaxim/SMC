@@ -1,0 +1,20 @@
+.crumbs {
+    display: flex;
+    &__links {
+        font-size: 16px;
+        line-height: 20px;
+        a,
+        span {
+            text-decoration: none;
+            color: #cccccc;
+            margin-right: 8px;
+        }
+    }
+    &__last {
+        font-size: 16px;
+        line-height: 20px;
+        color: #3a80ba;
+        font-style: normal;
+        font-weight: normal;
+    }
+}
