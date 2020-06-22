@@ -13,15 +13,15 @@ textarea:active {
 :focus {
     outline: none;
 }
-textarea {
-    resize: none;
-}
-textarea {
-    resize: vertical;
-}
-textarea {
-    resize: horizontal;
-}
+// textarea {
+//     resize: none;
+// }
+// textarea {
+//     resize: vertical;
+// }
+// textarea {
+//     resize: horizontal;
+// }
 
 .statsPage {
     display: grid;
@@ -38,124 +38,94 @@ textarea {
         font-weight: bold;
         margin-bottom: 16px;
     }
-    &__table {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        margin-bottom: 24px;
-    }
-    .usersTh,
-    .user {
-        display: grid;
-        grid-template-columns: 64px 150px 140px 250px 110px 148px;
-        height: 48px;
+    // &__table {
+    //     width: 100%;
+    //     margin-bottom: 24px;
+    // }
 
-        div {
-            margin-left: 10px;
-            border-right: 1px solid white;
-        }
-    }
-
-    .usersTh {
-        background: #3a80ba;
-        border-radius: 10px 0 0 0;
-        color: #ffffff;
-        div {
-            line-height: 48px;
-        }
-    }
-    .user,
-    .st {
-        background: #fbfbfb;
-        height: 32px;
-        text-decoration: none;
-        div {
-            font-size: 16px;
-            color: #1a1a1a;
-            line-height: 32px;
-        }
-    }
-    .userSt,
-    .st {
-        display: grid;
-        grid-template-columns: 158px 177px;
-        div {
-            margin-left: 10px;
-            border-right: 1px solid white;
-        }
-        :last-child {
-            border: none;
-        }
-    }
-    .userSt {
-        background: #3a80ba;
-        border-radius: 0 10px 0 0;
-        color: #ffffff;
-
-        div {
-            line-height: 48px;
-        }
-    }
-    .st {
-        justify-items: center;
-    }
-    .usersBg {
-        background: #f1f1f1;
-    }
     &__footer {
         grid-row-start: 3;
         grid-row-end: 4;
     }
 }
 
-// pagination
-.pagination {
-    display: flex;
-    margin: 0 auto;
-    max-width: 350px;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    margin-bottom: 81px;
-    padding: 0 2px;
-}
-.previous_page,
-.next_page {
-    display: inline-block;
-    align-self: center;
-    width: 15px;
-    height: 26px;
-    align-items: center;
-    background-image: url("../../img/Line9.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: 30px;
-    color: #3a80ba;
-}
-.previous_page {
-    transform: rotate(180deg);
-    margin-right: 10px;
-}
-.next_page {
-    margin-left: 10px;
-}
-.active {
-    border-radius: 8px;
-    border-color: #3a80ba;
-    background: #3a80ba;
-    color: #ffffff;
-}
+.table {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    margin-bottom: 24px;
+    .tHead {
+        background: #3a80ba;
+        height: 48px;
+        color: #ffffff;
+        line-height: 48px;
+        text-align: center;
+        font-size: 16px;
+        text-align: center;
+    }
+    .firstName,
+    .lastName,
+    .email,
+    .gender,
+    .ipAddress,
+    .totalClicks,
+    .view,
+    .id {
+        &__content {
+            display: flex;
+            overflow: hidden;
+            padding-left: 10px;
+            min-height: 32px;
+            div {
+                margin: auto 0;
+            }
+            .center {
+                margin: auto;
+            }
+        }
 
-.disabled {
-    box-sizing: border-box;
-    align-self: center;
-    line-height: 48px;
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    border: 2px solid #f1f1f1;
-    border-radius: 8px;
-    &:hover {
-        border-color: #3a80ba;
+        &__content,
+        a {
+            font-size: 16px;
+            line-height: 20px;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+    }
+    div {
+        border-left: 1px solid white;
+    }
+    .id {
+        min-width: 65px;
+        &__head {
+            border-radius: 10px 0 0 0;
+        }
+    }
+    .firstName {
+        min-width: 150px;
+    }
+    .lastName {
+        min-width: 120px;
+    }
+    .email {
+        min-width: 280px;
+    }
+    .gender {
+        min-width: 110px;
+    }
+    .ipAddress {
+        min-width: 147px;
+    }
+    .totalClicks {
+        min-width: 153px;
+    }
+    .view {
+        min-width: 150px;
+        &__head {
+            border-radius: 0 10px 0 0;
+        }
+    }
+    .usersBg {
+        background: #f1f1f1;
     }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Main from './components/Main/Main';
 import Stats from './components/Stats/Stats';
-import { BrowserRouter as Router, Switch, Route, Link, } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 import Charts from './components/Charts/Charts';
 import users from './api/Users.json'
 import user_statistic from './api/Statistic.json'
@@ -11,13 +11,13 @@ const routes = [
   { path: "/", name: "Main", Component: () => <Main /> },
   {
     path: "/stats", name: "Stats", Component: () =>
-      <Stats users={users} crumbs={crumbs} user_statistic={user_statistic} />
+      <Stats crumbs={crumbs} />
   },
   {
     path: "/stats/:id",
     name: null,
     Component: () =>
-      <Charts users={users} crumbs={crumbs} user_statistic={user_statistic} />
+      <Charts crumbs={crumbs} />
   }
 ];
 
@@ -49,7 +49,7 @@ function App() {
                 // console.log(`Generated crumbs for ${props.match.path}`);
                 // crumbs.map(({ name, path }) => console.log({ name, path }));
                 return (
-                  <div className="p-8">
+                  <div >
                     <Component {...props} />
                   </div>
                 );

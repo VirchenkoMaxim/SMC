@@ -5,8 +5,8 @@ import "./Charts.style.css"
 const ClickChart = (props) => {
     const dataArr = props.data.map((d) => {
         return {
-            x: d.year + '/' + d.quarter,
-            y: parseFloat(d.count)
+            x: d.date,
+            y: parseFloat(d.clicks)
         }
     });
     return (

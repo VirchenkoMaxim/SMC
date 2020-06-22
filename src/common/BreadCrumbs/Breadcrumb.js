@@ -16,8 +16,8 @@ const Breadcrumbs = ({ crumbs, ...props }) => {
                         {name || props.name}
                     </span>
                 ) : (
-                        <div className={s.crumbs__links} >
-                            <Link className={s.crumbs__link} key={key} to={path}>
+                        <div className={s.crumbs__links} key={key} >
+                            <Link className={s.crumbs__link} to={path}>
                                 {name || props.name}
                             </Link>
                             <span className={s.crumbs__arrow}>></span>

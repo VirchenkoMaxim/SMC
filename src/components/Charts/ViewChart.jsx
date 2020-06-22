@@ -5,8 +5,8 @@ import { XYPlot, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LineSerie
 function ViewChart(props) {
     const dataArr = props.data.map((d) => {
         return {
-            x: d.year + '/' + d.quarter,
-            y: parseFloat(d.count)
+            x: d.date,
+            y: parseFloat(d.page_views)
         }
     });
 
