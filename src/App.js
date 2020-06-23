@@ -1,23 +1,33 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
-import Main from './components/Main/Main';
-import Stats from './components/Stats/Stats';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
-import Charts from './components/Charts/Charts';
-import users from './api/Users.json'
-import user_statistic from './api/Statistic.json'
+
+const Charts = React.lazy(() => import('./components/Charts/Charts'));
+const Stats = React.lazy(() => import('./components/Stats/Stats'));
+const Main = React.lazy(() => import('./components/Main/Main'));
 
 const routes = [
-  { path: "/", name: "Main", Component: () => <Main /> },
+  {
+    path: "/", name: "Main", Component: () =>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Main />
+      </Suspense>
+  },
   {
     path: "/stats", name: "Stats", Component: () =>
-      <Stats crumbs={crumbs} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Stats crumbs={crumbs} />
+      </Suspense>
+
   },
   {
     path: "/stats/:id",
     name: null,
     Component: () =>
-      <Charts crumbs={crumbs} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Charts crumbs={crumbs} />
+      </Suspense>
+
   }
 ];
 

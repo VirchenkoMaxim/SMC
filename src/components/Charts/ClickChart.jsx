@@ -12,7 +12,7 @@ const ClickChart = (props) => {
     return (
         <XYPlot
             xType="ordinal"
-            width={1200}
+            width={1300}
             height={300}>
             <VerticalGridLines />
             <HorizontalGridLines />

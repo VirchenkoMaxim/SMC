@@ -9,16 +9,15 @@ import s from './Charts.module.scss'
 import Breadcrumbs from '../../common/BreadCrumbs/Breadcrumb';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { setUsers, setStatistic } from '../../Redux/chartsReduser';
+import { setUsers } from '../../Redux/chartsReduser';
 
 
-function Charts({ crumbs, users, match, setUsers, statistic, setStatistic }) {
+function Charts({ crumbs, users, match, setUsers, statistic, usersPageNumber }) {
 
-    useEffect(() => {
-        setUsers()
-        setStatistic()
-    }, [])
-    if (!users || !statistic) {
+    // useEffect(() => {
+    //     setUsers(usersPageNumber)
+    // }, [])
+    if (!users && !statistic) {
         return <div>Loading...</div>
     }
 
@@ -49,11 +48,12 @@ function Charts({ crumbs, users, match, setUsers, statistic, setStatistic }) {
 let mapStateToProps = (state) => {
     return {
         users: state.charts.users,
-        statistic: state.charts.statistic
+        statistic: state.charts.statistic,
+        usersPageNumber: state.charts.usersPageNumber
     }
 }
 export default compose(
-    connect(mapStateToProps, { setUsers, setStatistic }),
+    connect(mapStateToProps, { setUsers }),
     withRouter
 )(Charts)
 

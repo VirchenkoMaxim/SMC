@@ -6,16 +6,17 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Breadcrumbs from '../../common/BreadCrumbs/Breadcrumb'
 import { connect } from 'react-redux';
-import { setUsers, setStatistic } from '../../Redux/chartsReduser'
+import { setUsers } from '../../Redux/chartsReduser'
 import Paginator from '../../common/Pagination'
 import cn from 'classnames';
 const Stats = ({ usersPageNumber, usersCountPerPage, totalUsers,
-    crumbs, match, statistic, setStatistic, setUsers, users, ...props }) => {
+    crumbs, match, statistic, setUsers, users, ...props }) => {
     let [portionNumber, setPortionNumber] = useState(1);
     useEffect(() => {
         setUsers()
-        setStatistic()
+
     }, [])
+
     let onPageChanged = (item) => {
         setUsers(item);
     }
@@ -128,7 +129,7 @@ let mapStateToProps = (state) => {
 
     }
 }
-export default connect(mapStateToProps, { setUsers, setStatistic })(Stats)
+export default connect(mapStateToProps, { setUsers })(Stats)
 
 
 
