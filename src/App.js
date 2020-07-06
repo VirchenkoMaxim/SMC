@@ -2,8 +2,8 @@ import React, { Suspense } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, } from 'react-router-dom';
 
-const Charts = React.lazy(() => import('./components/Charts/Charts'));
-const Stats = React.lazy(() => import('./components/Stats/Stats'));
+// const Charts = React.lazy(() => import('./components/Charts/Charts'));
+// const Stats = React.lazy(() => import('./components/Stats/Stats'));
 const Main = React.lazy(() => import('./components/Main/Main'));
 
 const routes = [
@@ -13,22 +13,22 @@ const routes = [
         <Main />
       </Suspense>
   },
-  {
-    path: "/stats", name: "Stats", Component: () =>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Stats crumbs={crumbs} />
-      </Suspense>
+  // {
+  //   path: "/stats", name: "Stats", Component: () =>
+  //     <Suspense fallback={<div>Loading...</div>}>
+  //       <Stats crumbs={crumbs} />
+  //     </Suspense>
 
-  },
-  {
-    path: "/stats/:id",
-    name: null,
-    Component: () =>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Charts crumbs={crumbs} />
-      </Suspense>
+  // },
+  // {
+  //   path: "/stats/:id",
+  //   name: null,
+  //   Component: () =>
+  //     <Suspense fallback={<div>Loading...</div>}>
+  //       <Charts crumbs={crumbs} />
+  //     </Suspense>
 
-  }
+  // }
 ];
 
 let crumbs;
