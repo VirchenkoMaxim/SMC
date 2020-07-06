@@ -14,7 +14,6 @@ const Stats = ({ usersPageNumber, usersCountPerPage, totalUsers,
     let [portionNumber, setPortionNumber] = useState(1);
     useEffect(() => {
         setUsers()
-
     }, [])
 
     let onPageChanged = (item) => {
@@ -31,20 +30,20 @@ const Stats = ({ usersPageNumber, usersCountPerPage, totalUsers,
     }
 
     let resultClicks = statistic.reduce((prev, item) => {
-        if (item.user_id in prev) {
-            prev[item.user_id] += item.clicks;
+        if (item.userId in prev) {
+            prev[item.userId] += item.clicks;
         } else {
-            prev[item.user_id] = item.clicks;
+            prev[item.userId] = item.clicks;
         }
         return prev;
     }, [])
 
     let resultViews = statistic.reduce((prev, item) => {
-        if (item.user_id in prev) {
-            prev[item.user_id] += item.page_views;
+        if (item.userId in prev) {
+            prev[item.userId] += item.page_views;
 
         } else {
-            prev[item.user_id] = item.page_views;
+            prev[item.userId] = item.page_views;
         }
         return prev;
     }, [])

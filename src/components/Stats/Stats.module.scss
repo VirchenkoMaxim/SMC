@@ -13,16 +13,6 @@ textarea:active {
 :focus {
     outline: none;
 }
-// textarea {
-//     resize: none;
-// }
-// textarea {
-//     resize: vertical;
-// }
-// textarea {
-//     resize: horizontal;
-// }
-
 .statsPage {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -38,17 +28,13 @@ textarea:active {
         font-weight: bold;
         margin-bottom: 16px;
     }
-    // &__table {
-    //     width: 100%;
-    //     margin-bottom: 24px;
-    // }
 
     &__footer {
+        margin-top: 40px;
         grid-row-start: 3;
         grid-row-end: 4;
     }
 }
-
 .table {
     display: grid;
     grid-template-columns: repeat(8, 1fr);

@@ -8,4 +8,4 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api', require('./serverApi'))
-app.listen(4000)
+app.listen(4000, () => console.log("Server started"))

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { withRouter } from 'react-router'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -14,16 +14,16 @@ import { setUsers } from '../../Redux/chartsReduser';
 
 function Charts({ crumbs, users, match, setUsers, statistic, usersPageNumber }) {
 
-    // useEffect(() => {
-    //     setUsers(usersPageNumber)
-    // }, [])
-    if (!users && !statistic) {
+    useEffect(() => {
+        setUsers(usersPageNumber)
+    }, [])
+    if (!users || !statistic) {
         return <div>Loading...</div>
     }
 
     let id = match.params.id;
     let user = users.filter(item => item.first_name + item.last_name === id);
-    let statisticData = statistic.filter((elem => elem.user_id === user[0].id))
+    let statisticData = statistic.filter((elem => elem.userId === user[0].id))
     return (
         <div className={s.charts}>
             <Header />
@@ -52,8 +52,13 @@ let mapStateToProps = (state) => {
         usersPageNumber: state.charts.usersPageNumber
     }
 }
+const mapDispatchToProps = dispatch => {
+    return {
+        setUsers: (payload) => dispatch(setUsers(payload)),
+    }
+}
 export default compose(
-    connect(mapStateToProps, { setUsers }),
+    connect(mapStateToProps, mapDispatchToProps),
     withRouter
 )(Charts)
 
